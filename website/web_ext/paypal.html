@@ -1,1 +1,50 @@
-test
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/paypal.css" />
+    <link rel="stylesheet" href="lib/jquery-ui/themes/cupertino/jquery-ui.min.css" />
+
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=AVXTX9F_thAGB9IdWgxvm-3fY0gkdN76QNISqm3eRKiO6H7Zu2XYxlOznEnJfTBXnerQHJvmB4FccbJS&vault=true&intent=subscription"
+        data-sdk-integration-source="button-factory"></script>
+    <script type="text/javascript" src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/paypal.min.js"></script>
+
+</head>
+
+<body class="ui-widget-content" style="border:transparent" sub_ready>
+    <button id="btn-paypal-show" class="ui-helper-hidden"></button>
+    <button id="btn-paypal-approve" class="ui-helper-hidden"></button>
+    <div id="box-retry-connect">
+        <p>Warning: Failed to connect to license server, please click "Retry" button to re-connect.</p>
+        <button id="btn-retry-connect">Retry</button>
+    </div>
+    <div id="box-subscrption">
+        <div>
+            Dear customer, hope you enjoy the beginning part of the book, there's still much more to listen, but
+            you've reached the end of your free preview.<br />
+            Please subscribe now to continue listening, with a subscription you will enjoy listening to ebooks from:
+        </div>
+        <ul>
+            <li>Google Play</li>
+            <li>Kindle Cloud Reader</li>
+            <li>Overdrive Libraries</li>
+            <li>Scribd</li>
+        </ul>
+        <center>
+            <div id="paypal-buttons"></div>
+        </center>
+    </div>
+    <div id="box-approved">
+        <h3>Thank you very much for your subscription!</h3>
+        <p>You can close the dialog and continue enjoying the audible book.</p>
+    </div>
+    <div id="box-retry-approve">
+        <p>Warning: Failed to submit subscription info to license server, please click on "Retry" button to
+            re-submit.</p>
+        <button id="btn-retry-approve">Retry</button>
+    </div>
+</body>
+
+</html>
